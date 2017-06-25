@@ -1,0 +1,25 @@
+{
+  "name": "reddit-personality",
+  "version": "0.0.1",
+  "description": "A fun project that aims to utilize IBM Watson's Personality Insights API in the context of Reddit comments to output a user's 'personality portrait' - a demo provided by IBM in the context of tweets may be found at personality-insights-livedemo.mybluemix.net.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/skywang329/Reddit-Personality.git"
+  },
+  "author": "skywang329",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/skywang329/Reddit-Personality/issues"
+  },
+  "homepage": "https://github.com/skywang329/Reddit-Personality#readme",
+  "dependencies": {
+    "express": "3.3.4",
+    "mongodb": "1.4.9",
+    "pug": "^2.0.0-rc.2",
+    "watson-developer-cloud": "^2.32.1"
+  }
+}
