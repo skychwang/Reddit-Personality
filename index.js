@@ -38,9 +38,13 @@ app.get('/favicon.ico', function(req, res) {
     res.send(204);
 });
 
-app.get('/:user', function(req, res) { 
+app.post('/submit', function(req, res) {
+  res.redirect('/user/' + req.body.username); 
+});
+
+app.get('/user/:user', function(req, res) { 
   var posts = new Array();
-  request('https://www.reddit.com/user/' + req.params.user + '/.json?limit=100000', function (error, response, body) {
+  request('https://www.reddit.com/user/' + req.params.user + '/.json?limit=1000000', function (error, response, body) {
     //console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received 
     //console.log('body:', body); // Print the HTML for the Google homepage. 
     if (error) {
@@ -73,6 +77,10 @@ app.get('/:user', function(req, res) {
       });
     }
   });
+});
+
+app.get('/main', function(req, res) {
+  res.render('main');
 });
 
 http.createServer(app).listen(app.get('port'), function(){
