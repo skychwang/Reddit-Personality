@@ -9,8 +9,8 @@ IBM Watson Personality Insights API
 
 # Current State of project
 
-Initialized modules.
+Backend done
 
 # To-Do-List  
 
-Everything :)  
+Backend works, front end magic time  
