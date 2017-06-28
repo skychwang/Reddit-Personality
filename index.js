@@ -83,7 +83,7 @@ app.get('/user/:user/results', function(req, res) {
     res.render('results');
 });
 
-app.get('/main', function(req, res) {
+app.get('/', function(req, res) {
   res.render('main');
 });
 
