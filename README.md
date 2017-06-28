@@ -9,8 +9,8 @@ IBM Watson Personality Insights API
 
 # Current State of project
 
-Backend done
+Backend done, Frontend Done, Need to connect them now
 
 # To-Do-List  
 
-Backend works, front end magic time  
+Connect front and back ends
