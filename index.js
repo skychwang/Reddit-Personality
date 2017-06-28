@@ -39,10 +39,10 @@ app.get('/favicon.ico', function(req, res) {
 });
 
 app.post('/submit', function(req, res) {
-  res.redirect('/user/' + req.body.username); 
+  res.redirect('/user/' + req.body.username + '/results'); 
 });
 
-app.get('/user/:user', function(req, res) { 
+app.get('/user/:user/raw', function(req, res) { 
   var posts = new Array();
   request('https://www.reddit.com/user/' + req.params.user + '/.json?limit=1000000', function (error, response, body) {
     //console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received 
@@ -77,6 +77,10 @@ app.get('/user/:user', function(req, res) {
       });
     }
   });
+});
+
+app.get('/user/:user/results', function(req, res) { 
+    res.render('results');
 });
 
 app.get('/main', function(req, res) {
