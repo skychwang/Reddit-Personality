@@ -39,7 +39,19 @@ app.get('/favicon.ico', function(req, res) {
 });
 
 app.post('/submit', function(req, res) {
-  res.redirect('/user/' + req.body.username + '/results'); 
+  var object = {user: req.body.username}
+  var collection = 'recentUsers';
+  collectionDriver.save(collection, object, function(err,docs) {
+    if (err) { res.send(400, err); } 
+    else { res.redirect('/user/' + req.body.username + '/results'); }
+  });
+});
+
+app.get('/rawRecentUsers', function(req, res) {
+  collectionDriver.findAll('recentUsers', function(error, objs) {
+    res.set('Content-Type','application/json'); //G
+    res.send(200, {user: objs});  
+  });
 });
 
 app.get('/user/:user/raw', function(req, res) { 

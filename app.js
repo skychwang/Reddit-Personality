@@ -143,3 +143,16 @@ app.controller("Needs", function ($scope) {
     }
   };
 });
+
+angular.module('ruapp', []).controller('rusers', function($scope, $http) {
+	$scope.orderByField = 'created_at';
+	$scope.reverseSort = true;
+	$scope.data = null;
+	$scope.limit = 5;
+  $http.get("http://localhost:3000/rawRecentUsers").then(function(response) {
+    $scope.data = response.data;
+    //console.log(response.data);
+  })
+
+})
+
