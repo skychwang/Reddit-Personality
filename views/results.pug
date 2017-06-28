@@ -16,17 +16,17 @@ body(ng-app="app")
     h1 Reddit Personality Insights | Results
     hr
   div(class="container")
-    div(class="col-md-4" ng-controller="Extraversion")
+    div(class="col-md-4" ng-controller="Values")
       center
-        h2 Hedonism
+        h2 Values
       <canvas id="radar" class="chart chart-radar" chart-data="data" chart-options="options" chart-labels="labels"></canvas>
     div(class="col-md-4" ng-controller="Big5")
       center
-        h2 "The Big 5"
+        h2 The Big 5
       <canvas id="radar" class="chart chart-radar" chart-data="data" chart-options="options" chart-labels="labels"></canvas>
-    div(class="col-md-4" ng-controller="Extraversion")
+    div(class="col-md-4" ng-controller="Needs")
       center
-        h2 Harmony
+        h2 Needs
       <canvas id="radar" class="chart chart-radar" chart-data="data" chart-options="options" chart-labels="labels"></canvas>
   hr
   center
@@ -45,11 +45,11 @@ body(ng-app="app")
       center
         p Extraversion
     div(class="col-md-2")
-    div(class="col-md-4" ng-controller="Extraversion")
+    div(class="col-md-4" ng-controller="Agreeableness")
       <canvas id="radar" class="chart chart-radar" chart-data="data" chart-options="options" chart-labels="labels"></canvas>
       center
         p Agreeableness
-    div(class="col-md-4" ng-controller="Extraversion")
+    div(class="col-md-4" ng-controller="EmotionalRange")
       <canvas id="radar" class="chart chart-radar" chart-data="data" chart-options="options" chart-labels="labels"></canvas>
       center
         p Emotional Range

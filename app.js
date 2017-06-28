@@ -71,3 +71,75 @@ app.controller("Extraversion", function ($scope) {
     }
   };
 });
+
+app.controller("Agreeableness", function ($scope) {
+  $scope.labels =["Altruism", "Cooperation", "Modesty", "Uncompromising", "Sympathy", "Trust"];
+
+  $scope.data = [
+    [0.98, 0.87, 1.00, 0.72, 1.00, 0.14]
+  ];
+
+  $scope.options = {
+  	scale: {
+        ticks: {
+        	min: 0,
+            max: 1,
+        	stepSize: 0.2
+        }
+    }
+  };
+});
+
+app.controller("EmotionalRange", function ($scope) {
+  $scope.labels =["Fiery", "Prone to worry", "Melancholy", "Immoderation", "Self-consciousness", "Susceptible to stress"];
+
+  $scope.data = [
+    [0.98, 0.87, 1.00, 0.72, 1.00, 0.14]
+  ];
+
+  $scope.options = {
+  	scale: {
+        ticks: {
+        	min: 0,
+            max: 1,
+        	stepSize: 0.2
+        }
+    }
+  };
+});
+
+app.controller("Values", function ($scope) {
+  $scope.labels =["Conservation", "Openness to change", "Hedonism", "Self-enhancement", "Self-transcendence"];
+
+  $scope.data = [
+    [0.98, 0.87, 1.00, 0.72, 1.00]
+  ];
+
+  $scope.options = {
+  	scale: {
+        ticks: {
+        	min: 0,
+            max: 1,
+        	stepSize: 0.2
+        }
+    }
+  };
+});
+
+app.controller("Needs", function ($scope) {
+  $scope.labels =["Challenge", "Closeness", "Curiosity", "Excitement", "Harmony", "Ideal", "Liberty", "Love", "Practicality", "Self-expression", "Stability", "Structure"];
+
+  $scope.data = [
+    [0.98, 0.87, 1.00, 0.72, 1.00, 0.14, 0.98, 0.87, 1.00, 0.72, 1.00, 0.14]
+  ];
+
+  $scope.options = {
+  	scale: {
+        ticks: {
+        	min: 0,
+            max: 1,
+        	stepSize: 0.2
+        }
+    }
+  };
+});
