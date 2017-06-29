@@ -9,7 +9,9 @@ var http = require('http'),
   config = require('./config'),
   //watson = require('watson-developer-cloud');
   PersonalityInsightsV3 = require('watson-developer-cloud/personality-insights/v3')
-  personality_insights = new PersonalityInsightsV3(config.PERSONALITY_INSIGHTS_API_KEY);
+  personality_insights = new PersonalityInsightsV3(config.PERSONALITY_INSIGHTS_API_KEY),
+  PersonalityTextSummaries = require('personality-text-summary'),
+  v3EnglishTextSummaries = new PersonalityTextSummaries({ locale: 'en', version: 'v3' });
 
 var app = express();
 app.set('port', process.env.PORT || 3000);
@@ -83,6 +85,7 @@ app.get('/user/:user/results/raw', function(req, res) {
         if (err) {
           res.send(err);
         } else {
+          response.textSummary  = v3EnglishTextSummaries.getSummary(response);
           res.set('Content-Type','application/json');
           res.send(response);
         }

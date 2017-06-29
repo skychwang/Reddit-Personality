@@ -19,6 +19,7 @@
   "dependencies": {
     "express": "3.3.4",
     "mongodb": "1.4.9",
+    "personality-text-summary": "^2.1.5",
     "pug": "^2.0.0-rc.2",
     "request": "^2.81.0",
     "watson-developer-cloud": "^2.32.1"

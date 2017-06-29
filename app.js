@@ -193,6 +193,7 @@ app.controller("Overview", function ($scope, $rootScope, $timeout) {
 	$scope.wordCount = 0;
 	$scope.strength = "Null";
 	$scope.strengthDesc = "Null Description.";
+	$scope.textSummary = "";
 	$timeout(function() {
 		$scope.wordCount = $rootScope.data.word_count;
 		if ($scope.wordCount > 6000) {
@@ -210,6 +211,7 @@ app.controller("Overview", function ($scope, $rootScope, $timeout) {
 		} else {
 			$scope.strength = "Null";
 		}
+		$scope.textSummary = $rootScope.data.textSummary;
 	}, 10000);
 });
 
