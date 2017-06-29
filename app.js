@@ -238,9 +238,9 @@ app.controller("Overview", function ($scope, $rootScope, $timeout) {
 		for (var i = 0; i < $rootScope.data.consumption_preferences.length; i++) {
 			for (var c = 0; c < $rootScope.data.consumption_preferences[i].consumption_preferences.length; c++) {
 				if ($rootScope.data.consumption_preferences[i].consumption_preferences[c].score == 1) {
-					$scope.likely.push($rootScope.data.consumption_preferences[i].consumption_preferences[c].name);
+					$scope.likely.push($rootScope.data.consumption_preferences[i].consumption_preferences[c].name.substring(9, $rootScope.data.consumption_preferences[i].consumption_preferences[c].name.length));
 				} else if ($rootScope.data.consumption_preferences[i].consumption_preferences[c].score == 0) {
-					$scope.unlikely.push($rootScope.data.consumption_preferences[i].consumption_preferences[c].name);
+					$scope.unlikely.push($rootScope.data.consumption_preferences[i].consumption_preferences[c].name.substring(9, $rootScope.data.consumption_preferences[i].consumption_preferences[c].name.length));
 				} else {
 					//console.log(0.5);
 				}
