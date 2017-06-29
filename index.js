@@ -54,7 +54,7 @@ app.get('/rawRecentUsers', function(req, res) {
   });
 });
 
-app.get('/user/:user/raw', function(req, res) { 
+app.get('/user/:user/results/raw', function(req, res) { 
   var posts = new Array();
   request('https://www.reddit.com/user/' + req.params.user + '/.json?limit=1000000', function (error, response, body) {
     //console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received 

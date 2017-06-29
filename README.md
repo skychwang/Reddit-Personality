@@ -9,8 +9,8 @@ IBM Watson Personality Insights API
 
 # Current State of project
 
-Backend done, Frontend Done, Need to connect them now
+WORKS OMG  
 
 # To-Do-List  
 
-Connect front and back ends
+Improve on the method of getting around $http.get's asynchronous nature by using javascript $timeout. Complete documentation and readme.
