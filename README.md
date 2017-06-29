@@ -9,10 +9,10 @@ IBM Watson Personality Insights API
 
 # Current State of project
 
-Stats work, summary done omg it works  
-likely/unlikely format done  
+Stats work, summary, likely unlikely done omg done all on program AND it works  
 
 # To-Do-List  
 
 Get likely/unlikely done.  
-Improve on the currently used method of getting around $http.get's asynchronous nature by using javascript $timeout; find a better way. Complete documentation and readme, push for v1.0 release.  
+Improve on the currently used method of getting around $http.get's asynchronous nature by using javascript $timeout; find a better way.  
+Complete documentation and readme, push for v1.0 release.  

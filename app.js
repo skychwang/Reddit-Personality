@@ -189,11 +189,33 @@ app.controller("Needs", function ($scope, $rootScope, $timeout) {
   }, 10000);
 });
 
+app.controller("consumptionPreferences", function ($scope, $rootScope, $timeout) {
+	$scope.likely = [];
+	$scope.unlikely = [];
+
+	$timeout(function() {
+		for (var i = 0; i < $rootScope.data.consumption_preferences.length; i++) {
+			for (var c = 0; c < $rootScope.data.consumption_preferences[i].length; c++) {
+				if ($rootScope.data.consumption_preferences[i][c].score == 1) {
+					$scope.likely.push($rootScope.data.consumption_preferences[i][c].name);
+				} else if ($rootScope.data.consumption_preferences[i][c].score == 0) {
+					$scope.unlikely.push($rootScope.data.consumption_preferences[i][c].name);
+				}
+			}
+		};
+
+		console.log($scope.likely);
+		console.log($scope.unlikely);
+  	}, 10000);
+});
+
 app.controller("Overview", function ($scope, $rootScope, $timeout) {
 	$scope.wordCount = 0;
 	$scope.strength = "Null";
 	$scope.strengthDesc = "Null Description.";
-	$scope.textSummary = "";
+	$scope.textSummary = "Null Summary.";
+	$scope.likely = [];
+	$scope.unlikely = [];
 	$timeout(function() {
 		$scope.wordCount = $rootScope.data.word_count;
 		if ($scope.wordCount > 6000) {
@@ -212,6 +234,18 @@ app.controller("Overview", function ($scope, $rootScope, $timeout) {
 			$scope.strength = "Null";
 		}
 		$scope.textSummary = $rootScope.data.textSummary;
+
+		for (var i = 0; i < $rootScope.data.consumption_preferences.length; i++) {
+			for (var c = 0; c < $rootScope.data.consumption_preferences[i].consumption_preferences.length; c++) {
+				if ($rootScope.data.consumption_preferences[i].consumption_preferences[c].score == 1) {
+					$scope.likely.push($rootScope.data.consumption_preferences[i].consumption_preferences[c].name);
+				} else if ($rootScope.data.consumption_preferences[i].consumption_preferences[c].score == 0) {
+					$scope.unlikely.push($rootScope.data.consumption_preferences[i].consumption_preferences[c].name);
+				} else {
+					//console.log(0.5);
+				}
+			}
+		};
 	}, 10000);
 });
 

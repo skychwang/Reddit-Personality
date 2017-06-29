@@ -33,25 +33,32 @@ body(ng-app="app")
           center
             h5 Overview
         div(class="panel-body" ng-controller="Overview")
-          p 
-            b {{wordCount}} 
-            | words counted and analyzed. 
-            b {{strength}} 
-            | analysis. {{strengthDesc}}
-          
-          div(class="page-header")
-            h5 Summary
-          p {{textSummary}}
-          div(class="page-header")
-            h5 You are likely to______
-          p Lorem ipsum dolor sit amet, adversarium ullamcorper id ius. Sit fabulas antiopam pertinacia cu, labore molestie mediocrem mei cu, vim quot viris possim ex. Sea iusto sadipscing reformidans cu. Mei ei inimicus splendide voluptaria.
-          div(class="page-header")
-            h5 You are unlikely to______
-          p Lorem ipsum dolor sit amet, adversarium ullamcorper id ius. Sit fabulas antiopam pertinacia cu, labore molestie mediocrem mei cu, vim quot viris possim ex. Sea iusto sadipscing reformidans cu. Mei ei inimicus splendide voluptaria.
-          br
-          p 
-            b Note: 
-            | The scores you see below are all percentiles. They are comparing one person to a broader population. For example, a 90% on Extraversion does not mean that the person is 90% extroverted. It means that for that single trait, the person is more extroverted than 90% of the people in the population.
+          div(class="col-md-12")
+            p 
+              b {{wordCount}} 
+              | words counted and analyzed; 
+              b {{strength}} 
+              | analysis. {{strengthDesc}}
+          div(class="col-md-12")
+            div(class="page-header")
+              h5 Summary
+            p {{textSummary}}
+
+          div(class="col-md-6")
+            div(class="page-header")
+              h5 You are likely to______
+            ul
+              li(ng-repeat="likely in likely") {{likely}}
+          div(class="col-md-6")
+            div(class="page-header")
+              h5 You are unlikely to______
+            ul
+              li(ng-repeat="unlikely in unlikely") {{unlikely}}
+          div(class="col-md-12")
+            br
+            p 
+              b Note: 
+              | The scores you see below are all percentiles. They are comparing one person to a broader population. For example, a 90% on Extraversion does not mean that the person is 90% extroverted. It means that for that single trait, the person is more extroverted than 90% of the people in the population.
       div(class="panel panel-default")
         div(class="panel-heading")
           center
