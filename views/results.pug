@@ -31,6 +31,31 @@ body(ng-app="app")
       div(class="panel panel-default")
         div(class="panel-heading")
           center
+            h5 Overview
+        div(class="panel-body" ng-controller="Overview")
+          p 
+            b {{wordCount}} 
+            | words counted and analyzed. 
+            b {{strength}} 
+            | analysis. {{strengthDesc}}
+          
+          div(class="page-header")
+            h5 Summary
+          p Lorem ipsum dolor sit amet, adversarium ullamcorper id ius. Sit fabulas antiopam pertinacia cu, labore molestie mediocrem mei cu, vim quot viris possim ex. Sea iusto sadipscing reformidans cu. Mei ei inimicus splendide voluptaria. In pro autem iudicabit.
+          p Ad vim affert facilisis prodesset, ei epicuri contentiones mei. Sed an latine copiosae reprimique, salutatus hendrerit in sit. Sea paulo audiam volutpat at, eos iuvaret senserit salutatus ut. No dicam invenire has, labore omittam cu vel. Brute oblique verterem vel et, impedit constituam quo no, electram temporibus eu nam. Mea eu mollis labores euripidis, te est impetus voluptaria rationibus.
+          div(class="page-header")
+            h5 You are likely to______
+          p Lorem ipsum dolor sit amet, adversarium ullamcorper id ius. Sit fabulas antiopam pertinacia cu, labore molestie mediocrem mei cu, vim quot viris possim ex. Sea iusto sadipscing reformidans cu. Mei ei inimicus splendide voluptaria.
+          div(class="page-header")
+            h5 You are unlikely to______
+          p Lorem ipsum dolor sit amet, adversarium ullamcorper id ius. Sit fabulas antiopam pertinacia cu, labore molestie mediocrem mei cu, vim quot viris possim ex. Sea iusto sadipscing reformidans cu. Mei ei inimicus splendide voluptaria.
+          br
+          p 
+            b Note: 
+            | The scores you see below are all percentiles. They are comparing one person to a broader population. For example, a 90% on Extraversion does not mean that the person is 90% extroverted. It means that for that single trait, the person is more extroverted than 90% of the people in the population.
+      div(class="panel panel-default")
+        div(class="panel-heading")
+          center
             h5 Values | Personality | Needs
         div(class="panel-body")
           div(class="col-md-4" ng-controller="Values")

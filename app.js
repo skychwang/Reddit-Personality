@@ -8,7 +8,7 @@ app.run(function($rootScope, $http, $location) {
   	$rootScope.data = 'error: timeout';
   	$http.get(url).success(function(data) {
 		$rootScope.data = data;
-		//console.log($rootScope.data);
+		console.log($rootScope.data);
   	});
 })
 
@@ -32,7 +32,7 @@ app.controller("Personality", function ($scope, $rootScope, $timeout) {
 		        }
 		    }
 		};
-  }, 5000);
+  }, 10000);
 });
 
 app.controller("Openness", function ($scope, $rootScope, $timeout) {
@@ -54,7 +54,7 @@ app.controller("Openness", function ($scope, $rootScope, $timeout) {
 		        }
 		    }
 		};
-  }, 5000);
+  }, 10000);
 });
 
 app.controller("Conscientiousness", function ($scope, $rootScope, $timeout) {
@@ -76,7 +76,7 @@ app.controller("Conscientiousness", function ($scope, $rootScope, $timeout) {
 		        }
 		    }
 		};
-  }, 5000);
+  }, 10000);
 });
 
 app.controller("Extraversion", function ($scope, $rootScope, $timeout) {
@@ -98,7 +98,7 @@ app.controller("Extraversion", function ($scope, $rootScope, $timeout) {
 		        }
 		    }
 		};
-  }, 5000);
+  }, 10000);
 });
 
 app.controller("Agreeableness", function ($scope, $rootScope, $timeout) {
@@ -120,7 +120,7 @@ app.controller("Agreeableness", function ($scope, $rootScope, $timeout) {
 		        }
 		    }
 		};
-  }, 5000);
+  }, 10000);
 });
 
 app.controller("EmotionalRange", function ($scope, $rootScope, $timeout) {
@@ -142,7 +142,7 @@ app.controller("EmotionalRange", function ($scope, $rootScope, $timeout) {
 		        }
 		    }
 		};
-  }, 5000);
+  }, 10000);
 });
 
 app.controller("Values", function ($scope, $rootScope, $timeout) {
@@ -164,7 +164,7 @@ app.controller("Values", function ($scope, $rootScope, $timeout) {
 		        }
 		    }
 		};
-  }, 5000);
+  }, 10000);
 });
 
 app.controller("Needs", function ($scope, $rootScope, $timeout) {
@@ -186,7 +186,31 @@ app.controller("Needs", function ($scope, $rootScope, $timeout) {
 		        }
 		    }
 		};
-  }, 5000);
+  }, 10000);
+});
+
+app.controller("Overview", function ($scope, $rootScope, $timeout) {
+	$scope.wordCount = 0;
+	$scope.strength = "Null";
+	$scope.strengthDesc = "Null Description.";
+	$timeout(function() {
+		$scope.wordCount = $rootScope.data.word_count;
+		if ($scope.wordCount > 6000) {
+			$scope.strength = "Very Strong";
+			$scope.strengthDesc = "A word count of 6000 or more is a high-quality assessment of someone's personality. It's statistically significant."
+		} else if ($scope.wordCount > 3500) {
+			$scope.strength = "Strong";
+			$scope.strengthDesc = "This is a confident read of someone's personality. It's statistically significant! ...but wait, there's more! For only 6000 words, you'll get something so accurate it's scary."
+		} else if ($scope.wordCount > 1500) {
+			$scope.strength = "Decent";
+			$scope.strengthDesc = "These results are a general impression of this person, and they should be taken with a grain of salt. A word count of 3500 will result in a strong analysis."
+		} else if ($scope.wordCount > 100) {
+			$scope.strength = "Weak";
+			$scope.strengthDesc = "With this many words, you can't get a fair read on someone's personality. Use at least 1500 to get a general impression."
+		} else {
+			$scope.strength = "Null";
+		}
+	}, 10000);
 });
 
 angular.module('ruapp', []).controller('rusers', function($scope, $http) {
