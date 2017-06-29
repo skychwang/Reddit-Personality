@@ -8,7 +8,7 @@ app.run(function($rootScope, $http, $location) {
   	$rootScope.data = 'error: timeout';
   	$http.get(url).success(function(data) {
 		$rootScope.data = data;
-		console.log($rootScope.data);
+		//console.log($rootScope.data);
   	});
 })
 
@@ -247,6 +247,13 @@ app.controller("Overview", function ($scope, $rootScope, $timeout) {
 			}
 		};
 	}, 10000);
+});
+
+app.controller("rawData", function ($scope, $rootScope, $timeout) {
+	$scope.data = "{}";
+	$timeout(function() {
+		$scope.data = JSON.stringify($rootScope.data, null, 2);
+    }, 10000);
 });
 
 angular.module('ruapp', []).controller('rusers', function($scope, $http) {

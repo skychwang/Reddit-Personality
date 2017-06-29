@@ -1,11 +1,11 @@
-.centeredDiv {
-  width: 500px;
-
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
-  background-color: #F1F1F1;
- }
-
+.codeBlock {
+  display: block;
+  white-space: pre-wrap  
+  font-size: 1em;
+  font-family: "Courier New", "Lucida Console", monospace;
+  background: #323232;
+  color: #E0E0E0;
+  width: 100%;
+  overflow:scroll; 
+  height:50vh;
+}

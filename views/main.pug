@@ -8,7 +8,7 @@ head
     include ../bower_components/jquery/dist/jquery.min.js
     include ../app.js
 
-body
+body(ng-app="ruapp")
   br
   div(class="container")
     div(class="col-md-12")
@@ -31,7 +31,7 @@ body
       div(class="page-header")
         h2 Recent Searches
 
-      section(ng-app="ruapp" class="withId" ng-controller="rusers")
+      section(class="withId" ng-controller="rusers")
         span(class="label") Ordered By: {{orderByField}}, Reverse Sort: {{reverseSort}}
         br
         br

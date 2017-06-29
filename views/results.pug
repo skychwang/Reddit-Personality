@@ -108,3 +108,9 @@ body(ng-app="app")
         div(class="panel-body")
           <canvas id="radar" class="chart chart-radar" chart-data="data" chart-options="options" chart-labels="labels"></canvas>
     div(class="col-md-2")
+
+    div(class="col-md-12")
+      div(class="page-header")
+          h2 Raw JSON
+      pre(class="codeBlock" ng-controller="rawData") {{data}}
+      br

@@ -10,6 +10,7 @@ IBM Watson Personality Insights API
 # Current State of project
 
 Stats work, summary, likely unlikely done omg done all on program AND it works  
+Has option to view raw JSON data  
 
 # To-Do-List  
 
