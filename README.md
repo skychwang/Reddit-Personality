@@ -9,11 +9,24 @@ IBM Watson Personality Insights API
 
 # Current State of project
 
-Stats work, summary, likely unlikely done omg done all on program AND it works  
-Has option to view raw JSON data  
+Works! Minor improvements to be made in the future.
 
 # To-Do-List  
 
-Get likely/unlikely done.  
 Improve on the currently used method of getting around $http.get's asynchronous nature by using javascript $timeout; find a better way.  
 Complete documentation and readme, push for v1.0 release.  
+
+# Installation/Run
+
+Pre-install requirements:  
+- MongoDB server instance  
+- NPM
+- Bower
+
+Install instructions:  
+1. Clone repository  
+2. Open terminal, cd into folder, ``` npm install ```  and ``` bower install ```  
+
+Run instructions:  
+1. Run mongoDB server instance  
+2. In cloned folder, terminal ``` node . ```
