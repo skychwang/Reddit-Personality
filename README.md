@@ -26,7 +26,7 @@ Pre-install requirements:
 Installation instructions of web-app on local machine:  
 1. Clone repository.
 2. ``` cd ``` into cloned folder and install project dependencies with ``` npm install ```  and ``` bower install ```  
-3. Create ``` config.js ``` in cloned folder root directory and populate it with:
+3. Create ``` config.js ``` in cloned folder root directory and populate it with the following, entering your username and password credentials received from your IBM Bluemix's Personality Insights Service:
 
 ```
 var PERSONALITY_INSIGHTS_API_KEY = {
@@ -36,10 +36,9 @@ version_date: '2016-10-19'
 }
 
 exports.PERSONALITY_INSIGHTS_API_KEY = PERSONALITY_INSIGHTS_API_KEY;
-
 ```
 
 Instructions to run on local machine:  
 1. Run mongoDB server instance.  
-2. Start the web-app by ``` cd ```ing into the cloned folder (if you're not in) and starting the node.js instance with  ``` node . ```
+2. Start the web-app by ``` cd ```ing into the cloned folder (if you're not already in) and starting the node.js instance with  ``` node . ```
 3. In your browser, navigate to http://localhost:3000.
