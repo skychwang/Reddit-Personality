@@ -23,5 +23,8 @@
     "pug": "^2.0.0-rc.2",
     "request": "^2.81.0",
     "watson-developer-cloud": "^2.32.1"
+  },
+  "engines": {
+    "node": "6.10.3"
   }
 }

@@ -1,0 +1,7 @@
+var PERSONALITY_INSIGHTS_API_KEY = {
+	username: "79fa8a11-5f83-443e-8cd9-cb86ae948880",
+	password: "KoP6uo22kQLY",
+	version_date: '2016-10-19'
+}
+
+exports.PERSONALITY_INSIGHTS_API_KEY = PERSONALITY_INSIGHTS_API_KEY;
