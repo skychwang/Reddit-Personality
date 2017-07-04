@@ -42,3 +42,10 @@ Instructions to run on local machine:
 1. Run mongoDB server instance.  
 2. Start the web-app by ``` cd ```ing into the cloned folder (if you're not already in) and starting the node.js instance with  ``` node . ```
 3. In your browser, navigate to http://localhost:3000.
+
+# Screenshots
+
+![Landing Page](photos/LandingPage.jpeg?raw=true "Landing Page")
+![Results, 1](photos/Results1.jpeg?raw=true "Results, 1")
+![Results, 2](photos/Results2.jpeg?raw=true "Results, 2")
+![Results, 3](photos/Results3.jpeg?raw=true "Results, 3")
